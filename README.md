@@ -55,11 +55,11 @@ flowchart TD
 
 The key point was **cross-validation**: a candidate correction was not accepted merely because a particular bit flip appeared plausible. The reconstructed content had to satisfy the flash error-correction information *and* the UBIFS node integrity checks, before being considered for on-device use.
 
-## Results, and what they do not prove
+## Results
 
 **Observed after recovery:** The system completed its normal startup sequence; relevant management/application services started; its RUN indicator became active; link negotiation and additional interface status activity were observed; the operational CLI became accessible. The device's four NAND partitions were archived in both data-area and raw/OOB representations, and all eight output files passed recorded checksum verification.
 
-**Not established by that result:** NAND longevity, full switch-port functionality, every VLAN/SFP behavior, or the universal applicability of this approach to another hardware revision. Some physical ports were suspected to have a separate hardware fault; they should not be described as repaired by the firmware recovery.
+**Not established by that result:** NAND longevity, full switch-port functionality, every VLAN/SFP behavior, or the universal applicability of this approach to another hardware revision. Some physical ports were suspected to have a separate hardware fault, later confirmed that they had software off configuration - fully working.
 
 ## Repository contents
 
